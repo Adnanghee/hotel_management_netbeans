@@ -1,0 +1,21 @@
+services:
+  grandeur-pms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: grandeur_hotel_pms
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+      - JWT_SECRET=grandeur-prod-secret-replace-with-random-seed-2026
+      - DATABASE_PATH=/app/backend/data/hotel.db
+    volumes:
+      - hotel-data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  hotel-data:
+    driver: local
+

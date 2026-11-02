@@ -1,0 +1,31 @@
+{
+  "name": "grandeur-hotel-management-system",
+  "version": "1.0.0",
+  "description": "Enterprise-grade Full-Stack Hotel Management System (PMS) built with React, TypeScript, Tailwind CSS, Express, and SQLite.",
+  "scripts": {
+    "dev": "concurrently -n \"backend,frontend\" -c \"blue,magenta\" \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "keywords": [
+    "hotel-management-system",
+    "pms",
+    "hospitality",
+    "react",
+    "typescript",
+    "express",
+    "sqlite",
+    "tailwind-css",
+    "full-stack"
+  ],
+  "author": "Grandeur PMS",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
+
